@@ -32,6 +32,7 @@ public class BackRecRec {
 
     @FXML
     private Button AjouterActu;
+
     @FXML
     private Button  GoToFront;
 
@@ -210,7 +211,7 @@ public class BackRecRec {
     ListViewActu.getItems().addAll(actualites);
     }
     @FXML
-    public void SuprimerRec(ActionEvent event ) {
+    public void SupprimerRec(ActionEvent event ) {
 
         if (RecID.getText().isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -250,7 +251,6 @@ public class BackRecRec {
     // Add reclamations to the ListView
     RecListBack.getItems().addAll(reclamations);
 }
-
 
 
 }

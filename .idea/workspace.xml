@@ -5,19 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34dd4107-19d3-40dc-a010-8ceb9ecfe2f4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pidevskillhub/BackRecRec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pidevskillhub/BackRecRec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pidevskillhub/FrontRec_Actu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pidevskillhub/FrontRec_Actu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pidevskillhub/Services/ActualiteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pidevskillhub/Services/ActualiteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pidevskillhub/Services/ReclamationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pidevskillhub/Services/ReclamationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/BackRec_Rec.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/BackRec_Rec.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/FrontRec_Actu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/FrontRec_Actu.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +74,7 @@
       <workItem from="1713224755108" duration="836000" />
       <workItem from="1713225615537" duration="32020000" />
       <workItem from="1713311753034" duration="3962000" />
-      <workItem from="1713356182597" duration="21207000" />
+      <workItem from="1713356182597" duration="24425000" />
     </task>
     <servers />
   </component>

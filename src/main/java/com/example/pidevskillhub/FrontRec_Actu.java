@@ -38,6 +38,8 @@ public class FrontRec_Actu {
 
     @FXML
     private ListView<Reclamation> ListViewRec;
+    @FXML
+    private Button TrierRec;
 
     @FXML
     private TextField ObjetTextField;
@@ -188,6 +190,7 @@ public class FrontRec_Actu {
             reclamation.setObjet(objet);
             reclamation.setContenu(contenu);
             reclamation.setDate_reclamation(date_reclamation);
+            reclamation.setStatut("en attente");
 
             // Ajouter la nouvelle réclamation à la base de données en utilisant le service
             rs.ajouterReclamation(reclamation);
@@ -199,6 +202,14 @@ public class FrontRec_Actu {
             ObjetTextField.setText("");
             contenuTextField.clear();
         }
+    @FXML
+    public void Trier(ActionEvent event){
+        ListViewRec.getItems().clear();
+        List< Reclamation> r = rs.trier();
+        ListViewRec.getItems().addAll(r);
+
+    }
+
 
     private void afficherActualites() throws URISyntaxException {
         List<Actualite> actualites = as.afficherActualites();

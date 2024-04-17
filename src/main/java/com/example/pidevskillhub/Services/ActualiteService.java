@@ -94,5 +94,6 @@ public class ActualiteService {
 
         }
 
-    }   // Add methods for update and delete if needed
+    }
+
 }

@@ -113,6 +113,14 @@
                            </effect>
                         </Button>
                         <TextField fx:id="txtId" layoutX="414.0" layoutY="396.0" />
+                        <Button fx:id="TrierRec" layoutX="518.0" layoutY="51.0" mnemonicParsing="false" onAction="#Trier" text="Trier">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                        </Button>
                             </children>
                         </AnchorPane>
                     </content>

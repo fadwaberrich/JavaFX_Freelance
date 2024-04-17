@@ -48,7 +48,7 @@ public class ReclamationService {
 
                 r.setObjet(rs.getString("objet"));
                 r.setContenu(rs.getString("contenu"));
-                r.setStatut(rs.getString("statut"));
+                r.setStatut("En attente");
 
 
                 reclamations.add(r);
@@ -93,7 +93,31 @@ public class ReclamationService {
 
     }
 
+    public List<Reclamation> trier() {
+        List<Reclamation> list = new ArrayList<>();
+        try {
+            String req = "SELECT * FROM reclamation order by objet asc";
+            Statement st = cnx.createStatement();
+            ResultSet rs = st.executeQuery(req);
 
+            while (rs.next()) {
+
+                Reclamation r = new Reclamation();
+                r.setId(rs.getInt(1));
+                r.setObjet(rs.getString(2));
+                r.setContenu(rs.getString(3));
+                r.setStatut(rs.getString(4));
+               // r.setDate_reclamation(rs.getDate(5).toLocalDate());
+
+                list.add(r);
+            }
+
+        } catch (SQLException e) {
+
+        }
+        return list;
+
+    }
 
 
 }
