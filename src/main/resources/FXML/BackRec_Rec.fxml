@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="an2" prefHeight="600.0" prefWidth="846.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pidevskillhub.BackRecRec">
+   <children>
+      <TabPane prefHeight="600.0" prefWidth="847.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Actualités">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="24.0" layoutY="89.0" text="Titre">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="24.0" layoutY="165.0" text="Description">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="22.0" layoutY="235.0" text="Categorie">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="24.0" layoutY="297.0" text="Image">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="titreField" layoutX="139.0" layoutY="89.0" />
+                        <TextField fx:id="CategorieField" layoutX="139.0" layoutY="235.0" />
+                        <Button fx:id="AjouterActu" layoutX="139.0" layoutY="373.0" mnemonicParsing="false" onAction="#AjouterActualite" text="Ajouter" />
+                        <Button fx:id="btnBrowse" layoutX="300.0" layoutY="297.0" mnemonicParsing="false" onAction="#Browse" text="Browse" />
+                        <ImageView fx:id="imageViewActu" fitHeight="36.0" fitWidth="151.0" layoutX="139.0" layoutY="304.0" pickOnBounds="true" preserveRatio="true" />
+                        <ListView fx:id="ListViewActu" layoutX="383.0" layoutY="90.0" prefHeight="309.0" prefWidth="432.0" />
+                        <Button fx:id="ActualiserAct" layoutX="398.0" layoutY="38.0" mnemonicParsing="false" onAction="#ActualiserACt" text="Actualiser">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                        </Button>
+                        <Button fx:id="ModifierActu" layoutX="494.0" layoutY="471.0" mnemonicParsing="false" onAction="#ModifierActu" text="Modifier">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                        </Button>
+                        <Button fx:id="SupprimerActu" layoutX="383.0" layoutY="471.0" mnemonicParsing="false" onAction="#SupprimerActu" text="Supprimer">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                        </Button>
+                        <TextField fx:id="ActuID" layoutX="398.0" layoutY="415.0" />
+                        <Button fx:id="GoToFront" layoutX="719.0" layoutY="28.0" mnemonicParsing="false" onAction="#GoToFront" text="Go to Front">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                        </Button>
+                        <TextArea fx:id="DescriptionField" layoutX="139.0" layoutY="143.0" prefHeight="67.0" prefWidth="147.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Réclamations">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="171.0" prefWidth="340.0">
+                     <children>
+                        <ListView fx:id="RecListBack" layoutX="78.0" layoutY="128.0" prefHeight="328.0" prefWidth="453.0" />
+                        <Button fx:id="RecBackAcualiser" layoutX="78.0" layoutY="77.0" mnemonicParsing="false" onAction="#ActualiserRec" text="Actualiser">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                        </Button>
+                        <Button fx:id="SupprimerRec" layoutX="78.0" layoutY="470.0" mnemonicParsing="false" onAction="#SuprimerRec" text="Supprimer">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                        </Button>
+                        <TextField fx:id="RecID" layoutX="204.0" layoutY="475.0" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

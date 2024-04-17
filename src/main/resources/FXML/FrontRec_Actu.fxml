@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="an1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="847.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pidevskillhub.FrontRec_Actu">
+    <children>
+        <TabPane layoutX="-6.0" prefHeight="600.0" prefWidth="859.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Actualités">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="571.0" prefWidth="871.0">
+                     <children>
+                        <GridPane fx:id="GridPane" layoutX="37.0" layoutY="130.0" prefHeight="400.0" prefWidth="700.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                        </GridPane>
+                        <Label layoutX="272.0" layoutY="37.0" text="Les Actualités">
+                           <font>
+                              <Font name="Century Gothic Bold" size="21.0" />
+                           </font>
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                        </Label>
+                        <Button fx:id="admin" layoutX="728.0" layoutY="38.0" mnemonicParsing="false" onAction="#GoToAdmin" style="-fx-background-color: white;" text="GO to Admin">
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Button>
+                     </children></AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Réclamations">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="519.0" prefWidth="670.0">
+                            <children>
+                                <Label layoutX="21.0" layoutY="76.0" text="Objet : ">
+                                    <font>
+                                        <Font name="System Bold" size="15.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="21.0" layoutY="203.0" text="Contenu:">
+                                    <font>
+                                        <Font name="System Bold" size="15.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="ObjetTextField" layoutX="124.0" layoutY="74.0" prefHeight="25.0" prefWidth="199.0" />
+                                <TextArea fx:id="contenuTextField" layoutX="124.0" layoutY="186.0" prefHeight="75.0" prefWidth="200.0" />
+                                <Button fx:id="btnSoumettre" layoutX="135.0" layoutY="312.0" mnemonicParsing="false" onAction="#AjouterReclamation" text="Soumettre ">
+                                    <font>
+                                        <Font name="System Bold" size="15.0" />
+                                    </font>
+                                    <effect>
+                                        <InnerShadow>
+                                            <color>
+                                                <Color opacity="0.75" />
+                                            </color>
+                                        </InnerShadow>
+                                    </effect>
+                                </Button>
+                                <ListView fx:id="ListViewRec" layoutX="398.0" layoutY="95.0" prefHeight="284.0" prefWidth="361.0" />
+                                <Button fx:id="ActualiserREC" layoutX="414.0" layoutY="51.0" mnemonicParsing="false" onAction="#Actualiser" text="Actualiser">
+                                    <font>
+                                        <Font name="System Bold" size="15.0" />
+                                    </font>
+                                    <effect>
+                                        <InnerShadow />
+                                    </effect>
+                                </Button>
+                        <Button fx:id="btnSupprimer" layoutX="398.0" layoutY="439.0" mnemonicParsing="false" onAction="#SupprimerReclamation" text="Supprimer">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <effect>
+                              <InnerShadow>
+                                 <color>
+                                    <Color opacity="0.75" />
+                                 </color>
+                              </InnerShadow>
+                           </effect>
+                        </Button>
+                        <Button fx:id="btnModifier" layoutX="504.0" layoutY="439.0" mnemonicParsing="false" onAction="#modifierReclamation" text="Modifier">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <effect>
+                              <InnerShadow>
+                                 <color>
+                                    <Color opacity="0.75" />
+                                 </color>
+                              </InnerShadow>
+                           </effect>
+                        </Button>
+                        <TextField fx:id="txtId" layoutX="414.0" layoutY="396.0" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+      <Accordion />
+    </children>
+</AnchorPane>
