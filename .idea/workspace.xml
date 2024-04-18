@@ -6,12 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="34dd4107-19d3-40dc-a010-8ceb9ecfe2f4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pidevskillhub/BackRecRec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pidevskillhub/BackRecRec.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pidevskillhub/FrontRec_Actu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pidevskillhub/FrontRec_Actu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pidevskillhub/Services/ActualiteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pidevskillhub/Services/ActualiteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pidevskillhub/Services/ReclamationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pidevskillhub/Services/ReclamationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/BackRec_Rec.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/BackRec_Rec.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/FrontRec_Actu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/FrontRec_Actu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +46,9 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.4448276",
     "settings.editor.selected.configurable": "preferences.JavaFX"
   }
 }]]></component>
@@ -74,7 +75,7 @@
       <workItem from="1713224755108" duration="836000" />
       <workItem from="1713225615537" duration="32020000" />
       <workItem from="1713311753034" duration="3962000" />
-      <workItem from="1713356182597" duration="24425000" />
+      <workItem from="1713356182597" duration="35355000" />
     </task>
     <servers />
   </component>

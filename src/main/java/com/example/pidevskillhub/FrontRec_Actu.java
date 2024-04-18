@@ -14,9 +14,11 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.time.LocalDate;
+import java.util.Base64;
 import java.util.List;
 import java.util.Optional;
 
@@ -70,7 +72,7 @@ public class FrontRec_Actu {
 
         // Add reclamations to the ListView
         ListViewRec.getItems().addAll(reclamations);
-       // afficherActualites();
+       afficherActualites();
 
 
     }
@@ -241,20 +243,31 @@ public class FrontRec_Actu {
                             "-fx-border-color: black;"        // Border color
             );
             // Set the preferred width and height of the VBox
-            vbox.setPrefWidth(150);
-            vbox.setPrefHeight(150);
+            vbox.setPrefWidth(100);
+            vbox.setPrefHeight(100);
             // Centering content within the VBox
             vbox.setAlignment(Pos.CENTER);
             // Adding padding to the VBox
             vbox.setPadding(new Insets(10));
 
+            // Assuming actualite.getImage() returns the Base64 encoded image string
+            String base64Image = actualite.getImage();
             Image image = null;
-            if (actualite.getImage() != null) {
-                image = new Image(getClass().getResource(actualite.getImage()).toURI().toString());
+
+            if (base64Image != null && !base64Image.isEmpty()) {
+                try {
+                    // Decode Base64 string to byte array
+                    byte[] imageBytes = Base64.getDecoder().decode(base64Image);
+
+                    // Create Image from byte array
+                    image = new Image(new ByteArrayInputStream(imageBytes));
+                } catch (IllegalArgumentException e) {
+                    // Handle invalid Base64 string
+                    e.printStackTrace();
+                }
             }
 
-
-
+// Create ImageView from Image
             ImageView imageView = new ImageView(image);
             if (image != null) {
                 imageView.setFitWidth(180); // Set the width of the image
@@ -263,8 +276,10 @@ public class FrontRec_Actu {
 
 
             Label titleLabel = new Label(actualite.getTitre());
+
             titleLabel.setWrapText(true); // Wrap text within label
             titleLabel.setAlignment(Pos.CENTER); // Center the text horizontally
+
 
             Label descriptionLabel = new Label(actualite.getDescription());
             descriptionLabel.setWrapText(true); // Wrap text within label

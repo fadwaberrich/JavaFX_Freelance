@@ -7,6 +7,12 @@ import com.example.pidevskillhub.entities.Reclamation;
 import java.io.ByteArrayOutputStream;
 
 import java.io.IOException;
+import java.io.*;
+import java.awt.image.BufferedImage;
+import javafx.embed.swing.SwingFXUtils;
+import javax.imageio.ImageIO;
+
+
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.image.Image;
@@ -86,6 +92,26 @@ public class BackRecRec {
         LocalDate date_publication =LocalDate.now();
         String description = DescriptionField.getText();
         String categorie = CategorieField.getText();
+        String image = null;
+        Image javafxImage = imageViewActu.getImage();
+        if (javafxImage != null) {
+            // Convert the JavaFX Image to BufferedImage
+            BufferedImage bufferedImage = SwingFXUtils.fromFXImage(javafxImage, null);
+            if (bufferedImage != null) {
+                // Write the BufferedImage to a byte array
+                try (ByteArrayOutputStream baos = new ByteArrayOutputStream()) {
+                    ImageIO.write(bufferedImage, "png", baos);
+                    // Encode the byte array to Base64
+                    byte[] imageBytes = baos.toByteArray();
+                    image = Base64.getEncoder().encodeToString(imageBytes);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
+
+
 
 
         if (titre.isEmpty() || description.isEmpty() || categorie.isEmpty()) {
@@ -107,16 +133,21 @@ public class BackRecRec {
             return;
 
         }
-        String image=imageViewActu.toString();
+
+
         Actualite actualites=new Actualite();
         actualites.setTitre(titre);
         actualites.setDate_publication(date_publication);
         actualites.setDescription(description);
         actualites.setCategorie(categorie);
-        actualites.setImage(image);
+        if (image != null) {
+            actualites.setImage(image);
+        }
+      //  actualites.setImage(image);
 
         // Create an Actualite object with the data entered by the user
         as.ajouterActualite(actualites);
+
 
     }
 
@@ -128,9 +159,28 @@ public class BackRecRec {
                 new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg", "*.gif", "*.jpeg")
         );
         File selectedFile = fileChooser.showOpenDialog(null);
+
         if (selectedFile != null) {
-            Image image = new Image(selectedFile.toURI().toString());
-            imageViewActu.setImage(image);
+            try {
+                // Read the image file and convert it to a byte array
+                FileInputStream fis = new FileInputStream(selectedFile);
+                byte[] buffer = new byte[(int) selectedFile.length()];
+                fis.read(buffer);
+                fis.close();
+
+                // Encode the byte array to Base64
+                String base64Image = Base64.getEncoder().encodeToString(buffer);
+
+                // Display the image in the ImageView
+                Image image = new Image(selectedFile.toURI().toString());
+                System.out.println(image);
+                imageViewActu.setImage(image);
+
+
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 
