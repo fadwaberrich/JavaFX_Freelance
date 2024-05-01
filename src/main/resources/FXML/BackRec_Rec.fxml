@@ -80,6 +80,14 @@
                            </effect>
                         </Button>
                         <TextArea fx:id="DescriptionField" layoutX="139.0" layoutY="143.0" prefHeight="67.0" prefWidth="147.0" />
+                        <Button fx:id="excel" layoutX="515.0" layoutY="38.0" mnemonicParsing="false" onAction="#GenererExcel" text="Générer Excel">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                        </Button>
                      </children>
                   </AnchorPane>
             </content>

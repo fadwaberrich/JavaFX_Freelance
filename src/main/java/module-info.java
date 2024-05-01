@@ -8,7 +8,8 @@ module com.example.pidevskillhub  {
 
 
 
-    requires java.desktop; // Add this line to require the java.desktop module
+    requires java.desktop;
+    requires org.apache.poi.poi; // Add this line to require the java.desktop module
     // Other module declarations...
 
 

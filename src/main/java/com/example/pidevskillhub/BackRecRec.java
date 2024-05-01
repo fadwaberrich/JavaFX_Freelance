@@ -42,10 +42,13 @@ public class BackRecRec {
     @FXML
     private Button  GoToFront;
 
+
     @FXML
     private Button RecBackAcualiser;
     @FXML
     private Button pdf;
+    @FXML
+    private Button excel;
     @FXML
     private Button SupprimerRec;
     @FXML
@@ -314,5 +317,14 @@ public class BackRecRec {
 
 
  }
-
+@FXML
+    public void GenererExcel(ActionEvent event)
+{
+    as.generateExcel();
+    Alert alert = new Alert(Alert.AlertType.ERROR);
+    alert.setTitle("Information Dialog");
+    alert.setHeaderText(null);
+    alert.setContentText("Votre Fichier  est importé en Excel avec succeés   !");
+    alert.showAndWait();
+}
 }
