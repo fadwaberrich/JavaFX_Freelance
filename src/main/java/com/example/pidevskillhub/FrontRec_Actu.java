@@ -67,6 +67,8 @@ public class FrontRec_Actu {
     private void initialize() throws URISyntaxException {
         List<Reclamation> reclamations = rs.afficherReclamtion();
 
+
+
         // Clear existing items in the ListView
         ListViewRec.getItems().clear();
 
@@ -78,18 +80,18 @@ public class FrontRec_Actu {
     }
 
 
-    @FXML
-    void Actualiser(ActionEvent event) {
+     @FXML
+     void Actualiser(ActionEvent event) {
         // Retrieve reclamations from the service
-        List<Reclamation> reclamations = rs.afficherReclamtion();
+         List<Reclamation> reclamations = rs.afficherReclamtion();
 
-        // Clear existing items in the ListView
-        ListViewRec.getItems().clear();
+         // Clear existing items in the ListView
+         ListViewRec.getItems().clear();
 
-        // Add reclamations to the ListView
-        ListViewRec.getItems().addAll(reclamations);
+         // Add reclamations to the ListView
+         ListViewRec.getItems().addAll(reclamations);
 
-    }
+     }
     @FXML
     void GoToAdmin(ActionEvent event) {
         try {

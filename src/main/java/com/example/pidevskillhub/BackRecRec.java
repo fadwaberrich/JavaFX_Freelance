@@ -45,6 +45,8 @@ public class BackRecRec {
     @FXML
     private Button RecBackAcualiser;
     @FXML
+    private Button pdf;
+    @FXML
     private Button SupprimerRec;
     @FXML
     private ListView<Reclamation> RecListBack;
@@ -301,6 +303,16 @@ public class BackRecRec {
     // Add reclamations to the ListView
     RecListBack.getItems().addAll(reclamations);
 }
+ @FXML
+    public void  GenererPDF(ActionEvent event){
+    rs.generatePDF();
+     Alert alert = new Alert(Alert.AlertType.ERROR);
+     alert.setTitle("Information Dialog");
+     alert.setHeaderText(null);
+     alert.setContentText("Votre Fichier  est importé en PDF avec succeés  !");
+     alert.showAndWait();
 
+
+ }
 
 }

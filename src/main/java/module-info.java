@@ -4,6 +4,8 @@ module com.example.pidevskillhub  {
     requires javafx.fxml;
     requires java.sql;
     requires javafx.swing;
+    requires itextpdf;
+
 
 
     requires java.desktop; // Add this line to require the java.desktop module
