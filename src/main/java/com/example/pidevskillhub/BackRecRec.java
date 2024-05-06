@@ -346,6 +346,7 @@ public class BackRecRec {
 @FXML
 public void AfficherRecEnAttente(ActionEvent event)
 {
+    RecListBack.getItems().clear();
     List< Reclamation> r =  rs.afficherReclamtionEnAttente();
     RecListBack.getItems().addAll(r);
 

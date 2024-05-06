@@ -59,7 +59,7 @@ public class ReclamationService {
         List<Reclamation> reclamations = new ArrayList<>();
         String sql = "select * from reclamation";
         Statement ste;
-        LocalDate date_Rec= LocalDate.now();
+       // LocalDate date_Rec= LocalDate.now();
         boolean alternateStatut = false;
         try {
             ste = cnx.createStatement();
@@ -77,7 +77,8 @@ public class ReclamationService {
                     r.setStatut("En attente");
                 }
                 alternateStatut = !alternateStatut; // Switch the flag for the next iteration
-                r.setDate_reclamation(date_Rec);
+                java.sql.Date dateRec = rs.getDate("date_reclamation");
+                r.setDate_reclamation(dateRec.toLocalDate());
 
 
                 reclamations.add(r);
@@ -136,7 +137,7 @@ public class ReclamationService {
                 r.setObjet(rs.getString(2));
                 r.setContenu(rs.getString(3));
                 r.setStatut(rs.getString(4));
-               // r.setDate_reclamation(rs.getDate(5).toLocalDate());
+
 
                 list.add(r);
             }
@@ -275,7 +276,8 @@ public class ReclamationService {
                 r.setObjet(rs.getString("objet"));
                 r.setContenu(rs.getString("contenu"));
                 r.setStatut(rs.getString("statut"));
-                // Ajoutez la date de réclamation si nécessaire
+                java.sql.Date dateRec = rs.getDate("date_reclamation");
+                r.setDate_reclamation(dateRec.toLocalDate());
                 reclamations.add(r);
             }
         } catch (SQLException ex) {
