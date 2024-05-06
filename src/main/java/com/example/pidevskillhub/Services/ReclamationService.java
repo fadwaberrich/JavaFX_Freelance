@@ -60,6 +60,7 @@ public class ReclamationService {
         String sql = "select * from reclamation";
         Statement ste;
         LocalDate date_Rec= LocalDate.now();
+        boolean alternateStatut = false;
         try {
             ste = cnx.createStatement();
             ResultSet rs = ste.executeQuery(sql);
@@ -69,7 +70,13 @@ public class ReclamationService {
 
                 r.setObjet(rs.getString("objet"));
                 r.setContenu(rs.getString("contenu"));
-                r.setStatut("En attente");
+                // Set the "Statut" alternatively
+                if (alternateStatut) {
+                    r.setStatut("Resolu");
+                } else {
+                    r.setStatut("En attente");
+                }
+                alternateStatut = !alternateStatut; // Switch the flag for the next iteration
                 r.setDate_reclamation(date_Rec);
 
 
@@ -241,7 +248,43 @@ public class ReclamationService {
                 Logger.getLogger(ReclamationService.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
+    public long Search1() {
+
+        List<Reclamation> Rec = afficherReclamtion();
+        return Rec.stream().filter(b -> b.getStatut().equalsIgnoreCase("En attente")).count();
+
     }
+
+    public long Search2() {
+
+        List<Reclamation> Rec = afficherReclamtion();
+        return Rec.stream().filter(b -> b.getStatut().equalsIgnoreCase("Resolu")).count();
+
+    }
+
+
+    public List<Reclamation> afficherReclamtionEnAttente() {
+        List<Reclamation> reclamations = new ArrayList<>();
+        String sql = "SELECT * FROM reclamation WHERE statut = 'En attente'";
+        try {
+            Statement ste = cnx.createStatement();
+            ResultSet rs = ste.executeQuery(sql);
+            while (rs.next()) {
+                Reclamation r = new Reclamation();
+                r.setId(rs.getInt("id"));
+                r.setObjet(rs.getString("objet"));
+                r.setContenu(rs.getString("contenu"));
+                r.setStatut(rs.getString("statut"));
+                // Ajoutez la date de réclamation si nécessaire
+                reclamations.add(r);
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+        return reclamations;
+    }
+
+}
 
 
 

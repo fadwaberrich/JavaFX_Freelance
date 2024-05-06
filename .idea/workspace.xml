@@ -6,10 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="34dd4107-19d3-40dc-a010-8ceb9ecfe2f4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pidevskillhub/BackRecRec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pidevskillhub/BackRecRec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pidevskillhub/Services/ActualiteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pidevskillhub/Services/ActualiteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pidevskillhub/FrontRec_Actu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pidevskillhub/FrontRec_Actu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pidevskillhub/Services/ReclamationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pidevskillhub/Services/ReclamationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/BackRec_Rec.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/BackRec_Rec.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,7 +76,9 @@
       <workItem from="1713225615537" duration="32020000" />
       <workItem from="1713311753034" duration="3962000" />
       <workItem from="1713356182597" duration="38315000" />
-      <workItem from="1714596525621" duration="9852000" />
+      <workItem from="1714596525621" duration="13345000" />
+      <workItem from="1714610909669" duration="4205000" />
+      <workItem from="1714999988696" duration="1518000" />
     </task>
     <servers />
   </component>

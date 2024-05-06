@@ -194,7 +194,7 @@ public class FrontRec_Actu {
             reclamation.setObjet(objet);
             reclamation.setContenu(contenu);
             reclamation.setDate_reclamation(date_reclamation);
-            reclamation.setStatut("en attente");
+
 
             // Ajouter la nouvelle réclamation à la base de données en utilisant le service
             rs.ajouterReclamation(reclamation);

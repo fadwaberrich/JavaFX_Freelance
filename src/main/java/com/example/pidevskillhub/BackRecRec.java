@@ -1,5 +1,6 @@
 package com.example.pidevskillhub;
 
+//import com.example.pidevskillhub.Services.ActualiteService;
 import com.example.pidevskillhub.Services.ActualiteService;
 import com.example.pidevskillhub.Services.ReclamationService;
 import com.example.pidevskillhub.entities.Actualite;
@@ -15,6 +16,7 @@ import javax.imageio.ImageIO;
 
 
 import javafx.fxml.FXMLLoader;
+import javafx.scene.chart.PieChart;
 import javafx.scene.image.Image;
 import java.io.ByteArrayOutputStream;
 import java.util.Base64;
@@ -50,6 +52,10 @@ public class BackRecRec {
     @FXML
     private Button excel;
     @FXML
+    private Button stat;
+    @FXML
+    private PieChart Piechart;
+    @FXML
     private Button SupprimerRec;
     @FXML
     private ListView<Reclamation> RecListBack;
@@ -79,6 +85,8 @@ public class BackRecRec {
     private ImageView imageViewActu;
     @FXML
     private AnchorPane an2;
+    @FXML
+    private Button RecEnAttente;
 
     @FXML
     void GoToFront(ActionEvent event){
@@ -326,5 +334,21 @@ public class BackRecRec {
     alert.setHeaderText(null);
     alert.setContentText("Votre Fichier  est importé en Excel avec succeés   !");
     alert.showAndWait();
+}
+@FXML
+    public void AfficherStat(ActionEvent event){
+    Piechart.setTitle("Les statistiques sur l'état de réclamations ");
+    Piechart.getData().setAll(new PieChart.Data("En attente", rs.Search1()), new PieChart.Data("Resolu", rs.Search2()));
+
+}
+
+
+@FXML
+public void AfficherRecEnAttente(ActionEvent event)
+{
+    List< Reclamation> r =  rs.afficherReclamtionEnAttente();
+    RecListBack.getItems().addAll(r);
+
+
 }
 }
